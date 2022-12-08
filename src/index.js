@@ -1,14 +1,29 @@
-import _ from 'lodash';
 import './style.css';
 
-function component() {
-    const element = document.createElement('div');
-  
-    // Lodash, now imported by this script
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-    element.classList.add('hello');
-  
-    return element;
-  }
-  
-  document.body.appendChild(component());
+const Lists = [
+  {
+    description: 'Join Morning Meeting',
+    completed: false,
+    index: 1,
+  },
+  {
+    description: 'Complete Market Purchase',
+    completed: false,
+    index: 2,
+  },
+  {
+    description: 'Go For Playing Badminton',
+    completed: false,
+    index: 3,
+  },
+];
+
+Lists.sort((a, b) => a.index - b.index);
+
+const Container = document.querySelector('.list-item');
+
+Container.innerHTML = '';
+
+for (let i = 0; i < Lists.length; i += 1) {
+  Container.innerHTML += `<li><button class="toggle"></button><p>${Lists[i].description}</p></li>`;
+}
