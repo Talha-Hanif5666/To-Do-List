@@ -67,7 +67,7 @@ form {
   gap: 20px;
 }
 
-form .new-task {
+form .add {
   background: none;
   border: none;
 }
@@ -77,14 +77,14 @@ form i:hover {
   color: #184e9e;
 }
 
-form .add-task {
+form .task-input {
   width: 100%;
   padding: 10px 10px;
   border: none;
   border-bottom: 1px solid rgb(104, 104, 104);
 }
 
-form .add-task::placeholder {
+form .task-input::placeholder {
   color: rgb(102, 102, 102);
   font-size: 1.2em;
   font-family: "Quicksand", sans-serif;
@@ -92,7 +92,7 @@ form .add-task::placeholder {
   opacity: 0.7;
 }
 
-form .add-task:focus {
+form .task-input:focus {
   outline: none;
   font-size: 1em;
   font-family: "Quicksand", sans-serif;
