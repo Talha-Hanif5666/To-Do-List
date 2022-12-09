@@ -21,7 +21,7 @@ const showTasks = () => {
   listArr.forEach((element) => {
     newLiTag += `<li>
        <div class="left">
-       <input type="checkbox" onclick="completeTask(${element.index});">
+       <input id="checkbox-button" class="check" type="checkbox" />
        <input type="text" class="task" id="task${element.index}" value="${element.description}" readonly>
        </div>
        <div class="right">
